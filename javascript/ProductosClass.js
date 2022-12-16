@@ -108,7 +108,7 @@ class Producto {
   carrusel() {
 
     var divL1 = document.createElement('div');    
-    divL1.id = `carrouselProd${this.getCodigo}`;
+    divL1.id = `carrouselProd${this.codigo}`;
     divL1.className = 'carousel slide';
     divL1.setAttribute('data-ride', 'carousel');
 
@@ -116,7 +116,7 @@ class Producto {
     ol.className = 'carousel-indicators';
     for (let i = 0; i < this.listImagen.length; i++) {
       var li = document.createElement('li');      
-      li.setAttribute('data-target', `#carrouselProd${this.getCodigo}`);
+      li.setAttribute('data-target', `#carrouselProd${this.codigo}`);
       li.setAttribute('data-slide-to', i);
       i == 0 ? li.className = 'active' : null;
       ol.append(li);
@@ -143,7 +143,7 @@ class Producto {
 
     for (let i = 0; i < 2; i++) {
       var a = document.createElement('a');
-      a.setAttribute('href', `#carrouselProd${this.getCodigo}`);
+      a.setAttribute('href', `#carrouselProd${this.codigo}`);
       a.role = 'button';
       var span1 = document.createElement('span');      
       span1.ariaHidden = 'true';
